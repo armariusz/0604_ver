@@ -34,7 +34,7 @@ sap.ui.define([
 					oView.addDependent(oDialog);
 					return oDialog;
 				});
-			} 
+			}
 			this.pDialog.then(function(oDialog) {
 				oDialog.open();
 			});
