@@ -28,7 +28,7 @@
             title="{invoice>Quantity} x {invoice>ProductName}"
             
 		number="{
-			parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
+			parts: [{path: 'invoice>ExtEndedPrice'}, {path: 'view>/currency'}],
 			type: 'sap.ui.model.type.Currency',
 			formatOptions: {
 				showMeasure: false
