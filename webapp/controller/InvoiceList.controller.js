@@ -14,8 +14,14 @@ sap.ui.define([
 				currency: "EUR"
 			});
 			this.getView().setModel(oViewModel, "view");
-		}
-		,
+		},
+		onPress: function (oEvent) {
+			var oItem = oEvent.getSource();
+			var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail", {
+		invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
+			});
+		}		,
 		onFilterInvoices : function (oEvent) {
 			var aFilter = [];
 			var sQuery = oEvent.getParameter("query");
